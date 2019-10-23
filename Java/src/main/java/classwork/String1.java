@@ -1,3 +1,5 @@
+package classwork;
+
 import java.util.Random;
 import java.util.stream.IntStream;
 
