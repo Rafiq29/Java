@@ -1,4 +1,4 @@
-package October23;
+package classwork.October23;
 
 import java.util.ArrayList;
 import java.util.Random;
