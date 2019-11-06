@@ -2,7 +2,7 @@ package classwork.November6;
 
 public class Solution {
     public static void main(String[] args) {
-        String S = "RLRLRLRRLRLRLL";
+        String S = "RLRLLLLLRRRR";
         System.out.println(solution(S));
     }
 
