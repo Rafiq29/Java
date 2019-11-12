@@ -11,5 +11,6 @@ public class Console {
         int choose = sc.nextInt();
         System.out.println(mn.mainmenu());
         System.out.println("Enter option: "+choose);
+      //  System.out.println(mn.choose(choose));
     }
 }

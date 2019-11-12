@@ -9,6 +9,7 @@ public class MenuItem {
     private final String search = "Search";
     private final String exit = "Exit";
 
+    //idk
     class Item {
         int value;
         Item move;
@@ -19,7 +20,6 @@ public class MenuItem {
     }
 
     public void choose(int value) {
-        Item current;
         switch (value) {
             case 1:
                 throw new IllegalArgumentException("Not implemented yet");
@@ -33,6 +33,7 @@ public class MenuItem {
                 throw new IllegalArgumentException("Not implemented yet");
             case 6:
                 System.exit(888);
+            default: throw new IllegalArgumentException("Something went wrong");
         }
     }
 
