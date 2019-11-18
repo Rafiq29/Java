@@ -1,10 +1,13 @@
 package classwork.November18;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.StringJoiner;
+import java.util.stream.Collectors;
 
 public class WarmUp {
     public static void main(String[] args) {
-        System.out.println(sentences());
+        System.out.println(solution(subjects(),verbs(),objects()));
     }
 
 
@@ -43,5 +46,17 @@ public class WarmUp {
             }
         }
         return sentence.toString();
+    }
+    private static List<String> solution(List<String> subjects, List<String> verbs, List<String> object){
+        return subjects.stream().flatMap(subj ->
+                verbs.stream().flatMap(verb ->
+                object.stream().map(obj -> combine(subj,verb,obj) )))
+                .collect(Collectors.toList());
+    }
+
+    private static String combine(String subj, String verb, String obj) {
+        StringJoiner sj = new StringJoiner(" ");
+        sj.add(subj).add(verb).add(obj).add("\n");
+        return sj.toString();
     }
 }
