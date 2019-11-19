@@ -1,9 +1,13 @@
 package homework_preparing.Step_Project.resources;
 
-public enum Items {
-    ALL_FLIGHT,
-    BOOKING,
-    MY_BOOKING,
-    SEARCH,
-    EXIT
+public class Items {
+    private final String[] arr = new String[]{"ALL FLIGHTS",
+    "FLIGHT",
+    "MY BOOKING",
+    "REMOVE",
+    "EXIT"};
+
+    public String[] getArr() {
+        return arr;
+    }
 }

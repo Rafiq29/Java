@@ -4,6 +4,8 @@ public class Core {
     private Console console;
     private FlightController fc;
     private BookController bc;
+    private SystemConsole show;
+
     public Core(Console c) {
         this.console = c;
        // this.fc = new FlightController(c);
@@ -13,21 +15,31 @@ public class Core {
     {
         boolean exit = false;
         while (!exit) {
-          // console.println(menu);
+          console.println(show.menu());
             String s = console.readln();
             switch (s) {
                 case "0":
-                    throw new IllegalArgumentException("Not implemented yet");
+                    fc.show();
+                    break;
+//                    throw new IllegalArgumentException("Not implemented yet");
                 case "1":
-                    throw new IllegalArgumentException("Not implemented yet");
+                    fc.showOne();
+                    break;
+//                    throw new IllegalArgumentException("Not implemented yet");
                 case "2":
-                    throw new IllegalArgumentException("Not implemented yet");
+                    bc.showMy();
+                    break;
+//                    throw new IllegalArgumentException("Not implemented yet");
                 case "3":
-                    throw new IllegalArgumentException("Not implemented yet");
+                    bc.remove();
+                    break;
+//                    throw new IllegalArgumentException("Not implemented yet");
                 case "4":
                     exit=true; break;
                 default:
-                    throw new IllegalArgumentException("Something went wrong");
+                    console.println("Wrong input");
+                    break;
+//                    throw new IllegalArgumentException("Something went wrong");
             }
         }
 
