@@ -14,6 +14,6 @@ public class Pet{
         this.nickname = nickname;
         this.age = age;
         //this.trickLevel=trickLevel;
-        this.habits = habits;
+      //  this.habits = habits;
     }
 }
