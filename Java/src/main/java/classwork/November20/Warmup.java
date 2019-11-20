@@ -12,6 +12,7 @@ public class Warmup {
 
         handler.addServlet(new ServletHolder(new HelloServlet()),"/hello/*");
         handler.addServlet(new ServletHolder(new ByeServlet()),"/bye/*");
+        //handler.addServlet(new ServletHolder(new UrlReaderServlet()),"/url/*");
 
         server.setHandler(handler);
         server.start();
