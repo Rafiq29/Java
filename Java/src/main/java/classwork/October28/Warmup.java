@@ -6,6 +6,5 @@ public class Warmup {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Summarize summarize = new Summarize();
-
     }
 }
