@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.Optional;
 
 public class CalcServlet extends HttpServlet {
@@ -59,20 +60,10 @@ public class CalcServlet extends HttpServlet {
 
     PrintWriter writer = resp.getWriter();
     writer.printf("Calculator:%s", calc(
-        req.getParameter("x"),
-        req.getParameter("y"),
-        req.getParameter("op")
+            req.getParameter("x"),
+            req.getParameter("y"),
+            req.getParameter("op")
     ));
     writer.close();
-//
-//    final String SQLI = "INSERT INTO history (num_1, num_2, operation, result) values (?, ?, ?, ?)";
-//    CalcServlet calcs = new CalcServlet();
-//    Connection conn = DbConnection.getConnection();
-//    PreparedStatement stmt_insert = conn.prepareStatement(SQLI);
-//    stmt_insert.setString(1, "new message");
-//    stmt_insert.setInt(2, 33);
-//    stmt_insert.setInt(3, 44);
-//    stmt_insert.execute();
   }
-  }
-//}
+}
