@@ -1,7 +1,7 @@
 package classwork.December2;
 
 import java.util.*;
-
+//TODO: Finish
 public class WarmUp {
     public static void main(String[] args) {
         Random rnd = new Random();
