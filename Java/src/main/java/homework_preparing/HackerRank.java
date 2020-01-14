@@ -1,30 +1,27 @@
 package homework_preparing;
 
-//Complete this code or write your own from scratch
 import java.util.*;
-import java.io.*;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
-class Solution{
-    public static void main(String []argh){
-        Scanner in = new Scanner(System.in);
-        Map <String,Integer> pbook = new HashMap<>();
-        int n = in.nextInt();
-        for(int i = 0; i < n; i++){
-            String name = in.next();
-            int phone = in.nextInt();
-            // Write code here
-            pbook.put(name,phone);
+class Solution {
+
+    public static boolean getXO (String str) {
+//     str  = str.toLowerCase();
+        int counter = 0;
+        // Good Luck!!
+        for(int i = 0; i < str.length(); i++){
+            if (str.toLowerCase().charAt(i) == 'x') counter++;
+            if (str.toLowerCase().charAt(i) == 'o') counter--;
         }
-        while(in.hasNext()){
-            String s = in.next();
-            // Write code here
-            if (pbook.containsKey(s)) {
-                System.out.println(s+"="+pbook.get(s));
-            }
-            else System.out.println("Not found");
-        }
-        in.close();
+        return counter == 0;
+    }
+
+    public static void main(String[] args) {
+        String s1 = "xxXooo";
+        String s21 = "Xxxxertr34";
+        System.out.println(getXO(s1));
+        System.out.println(getXO(s21));
     }
 }
-
-
